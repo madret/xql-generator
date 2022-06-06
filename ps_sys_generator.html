@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sysmon Powershell query generator | example.com</title>
+</head>
 
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Powershell query <span style="color: red;">generator</span> for Sysmon.
+      </h1>
+	<hr/>
+      <h2 class="subtitle"></h2>
+		<form action="msfvenom-payload-generator.php" method="post" id="payload">
+		<p>Select platform:</p>
+		<div class="select">
+		<select class="" id="platform" name="platform">
+		<option option="windows">Windows</option>
+		<option option="linux">Linux</option>
+		<option option="other">Other...</option>
+		</select>
+		</div>
+	<br/>
+	<br/>
+
+		<p>Select action:</p>
+		<div class="select">
+		<select class="" id="action" name="action">
+		<option value="shell_reverse_tcp">shell_reverse_tcp</option>
+		<option value="shell_bind_tcp">shell_bind_tcp</option>
+		<option value="other">Other...</option>
+		</select>
+		</div>
+
+	<br/>
+	<br/>
+		<p>(Optional) File to trojanize:</p>
+<div class="file">
+  <label class="file-label">
+    <input class="file-input" type="file" name="upload">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Choose a file...
+      </span>
+    </span>
+  </label>
+</div>
+
+<p>or choose template:</p>
+<div class="select">
+<select name="template">
+<option value="calc">calc.exe</option>
+<option value="plink">plink.exe</option>
+<option value="other">Other...</option>
+</select>
+</div>
+
+
+	<br/>
+	<br/>
+
+		<p>(Optional) In case of a reverse shell, specify IP address and port to connect back:</p>
+		LHOST:
+<div class="field">
+  <div class="control">
+    <input class="input is-small" type="text" name="host" placeholder="192.168.2.1">
+  </div>
+</div>
+
+		LPORT:
+<div class="field">
+  <div class="control">
+    <input class="input is-small" type="text" name="port" placeholder="443">
+  </div>
+</div>
+
+	<br/>
+	<br/>
+
+	<p>Select output format:</p>
+	<div class="select">
+	<select name="output">
+	<option value="exe">exe</option>
+	<option value="py">python</option>
+	<option value="pw_sh">powershell</option>
+	<option value="exe-service">exe-service</option>
+	<option value="c">C</option>
+	<option value="js">JavaScript</option>
+	<option value="java">Java</option>
+	<option value="other">Other...</option>
+	</select>
+	</div>
+
+	<br/>
+	<br/>
+<label class="checkbox">
+  <input type="checkbox" name="obfuscation">
+  Use obfuscation
+</label>
+
+	<br/>
+	<br/>
+
+	<p>Comments or feedback:<textarea class="textarea" name="feedback"></textarea></p>
+
+	<br/>
+	<br/>
+
+	<input type="submit" class="button is-success" value="Generate payload">
+	</form>
+			<div class="container has-text-centered">
+				<a href="https://example.com">Example.com</a> This is a test string.
+			</div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
