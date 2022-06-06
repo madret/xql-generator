@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-
-<style>
-pre code {
-  background-color: #eee;
-  border: 1px solid #999;
-  display: block;
-  padding: 20px;
-}
-</style>
-
 <html>
 <head>
 	<title>Sysmon Powershell query generator | example.com</title>
