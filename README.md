@@ -2,7 +2,9 @@
 Generate Get-WinEvent cmdlet queries for Sysmon data. 
 
 ## Description
-When you're not sure which query options there are when searching through Sysmon data, use the generator to get you going.
+The command line is typically used over the Event Viewer GUI because it can allow for further granular control and filtering that the GUI does not offer.
+
+But when you're not sure which query/filter options there are when searching through Sysmon data, use the generator to get you going.
 Generating a valid Powershell query for command line usage.
 
 ## Output example:
