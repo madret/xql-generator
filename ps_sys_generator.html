@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+
+<style>
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}
+</style>
+
 <html>
 <head>
 	<title>Sysmon Powershell query generator | example.com</title>
@@ -74,7 +84,7 @@
 		<option value="SourceHostname">SourceHostname</option>
 		<option value="SourceImage">SourceImage</option>
 		<option value="SourceIp">SourceIp</option>
-		<option value="SourcePor">SourcePort</option>
+		<option value="SourcePort">SourcePort</option>
 		<option value="StartModule">StartModule</option>
 		<option value="TargetFileName">TargetFileName</option>
 		<option value="TargetImage">TargetImage</option>
@@ -89,14 +99,41 @@
 	<br/>
 	<br/>
 
+<p> <b>Optional:</b> Set the value for the choosen EventData (e.g DestinationPort):</p>
+
+		EventData Name:
+<div class="field">
+  <div class="control">
+    <input class="input is-small" type="text" name="port" placeholder="e.g. 4444">
+  </div>
+</div>
+
+<br/>
+<br/>
+
+<p> Example generated output:</p>
+<pre>
+  <code>
+Get-WinEvent -Path C:\Windows\System32\winevt\Logs\Microsoft-Windows-Sysmon%4Operational.evtx -FilterXPath 
+'*/System/EventID=3 and */EventData/Data[@Name="DestinationPort"] and */EventData/Data=4444
+  </code>
+</pre>
+
 
 	<br/>
 	<br/>
 
 	<input type="submit" class="button is-success" value="Generate query">
 	</form>
-			<div class="container has-text-centered">
-				<a href="https://example.com">Example.com</a> This is a test string.
+
+<br/>
+<br/>
+
+<div class="container has-text-centered">
+
+<p>Thanks for using the generator.</p>
+
+<a href="https://example.com">Example.com</a> 
 			</div>
     </div>
   </div>
