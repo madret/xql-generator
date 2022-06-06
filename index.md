@@ -97,7 +97,7 @@
 <br/>
 <br/>
 
-<p> Example generated output:</p>
+<p> Output example:</p>
 <pre>
   <code>
 Get-WinEvent -Path C:\Windows\System32\winevt\Logs\Microsoft-Windows-Sysmon%4Operational.evtx 
