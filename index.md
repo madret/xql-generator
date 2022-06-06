@@ -122,7 +122,7 @@ window.getSelection().removeAllRanges();
 	<br/>
 	<br/>
 			
-<p>Thanks for using the generator.</p>
+<p>Thanks for using the generator!</p>
 
 <a href="https://twitter.com/b41ss">@b41ss</a>		
 	</form>
