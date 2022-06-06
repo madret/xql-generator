@@ -1,7 +1,4 @@
 <html>
-<head>
-<title>Sysmon Powershell query generator</title>
-</head>
 
 <body>
 
@@ -103,8 +100,8 @@
 <p> Example generated output:</p>
 <pre>
   <code>
-Get-WinEvent -Path C:\Windows\System32\winevt\Logs\Microsoft-Windows-Sysmon%4Operational.evtx -FilterXPath 
-'*/System/EventID=3 and */EventData/Data[@Name="DestinationPort"] and */EventData/Data=4444
+Get-WinEvent -Path C:\Windows\System32\winevt\Logs\Microsoft-Windows-Sysmon%4Operational.evtx 
+-FilterXPath '*/System/EventID=3 and */EventData/Data[@Name="DestinationPort"] and */EventData/Data=4444
   </code>
 </pre>
 
