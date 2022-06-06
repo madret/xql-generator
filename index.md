@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Sysmon Powershell query generator | example.com</title>
+<title>Sysmon Powershell query generator</title>
 </head>
 
 <body>
