@@ -121,17 +121,15 @@ window.getSelection().removeAllRanges();
 	<br/>
 
 	<input type="submit" class="button is-success" value="Generate query">
-	</form>
 
-<br/>
-<br/>
-
-<div class="container has-text-centered">
-
+	<br/>
+	<br/>
+			
 <p>Thanks for using the generator.</p>
 
-<a href="https://twitter.com/b41ss">@b41ss</a> 
-			</div>
+<a href="https://twitter.com/b41ss">@b41ss</a>		
+	</form>
+
     </div>
   </div>
 </section>
