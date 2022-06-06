@@ -1,5 +1,17 @@
 <html>
 
+<script>
+function CopyToClipboard(id)
+{
+var r = document.createRange();
+r.selectNode(document.getElementById(id));
+window.getSelection().removeAllRanges();
+window.getSelection().addRange(r);
+document.execCommand('copy');
+window.getSelection().removeAllRanges();
+}
+</script>	
+	
 <body>
 
 <section class="hero">
@@ -99,12 +111,12 @@
 
 <p> Output example:</p>
 <pre>
-  <code>
+  <code id="copy">
 Get-WinEvent -Path C:\Windows\System32\winevt\Logs\Microsoft-Windows-Sysmon%4Operational.evtx 
 -FilterXPath '*/System/EventID=3 and */EventData/Data[@Name="DestinationPort"] and */EventData/Data=4444
   </code>
+<a href="#" onclick="CopyToClipboard('copy');return false;">Copy To clipboard</a>  
 </pre>
-
 
 	<br/>
 	<br/>
