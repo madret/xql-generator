@@ -1,37 +1,142 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
 
-You can use the [editor on GitHub](https://github.com/madret/Powershell-for_Sysmon/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<style>
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}
+</style>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<html>
+<head>
+	<title>Sysmon Powershell query generator | example.com</title>
+</head>
 
-### Markdown
+<body>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Sysmon query <span style="color: red;">generator</span> for Powershell.
+      </h1>
+	<hr/>
 
-```markdown
-Syntax highlighted code block
+<p> Set the path where the Sysmon eventlog is located:</p>
+-Path:
+<div class="field">
+  <div class="control">
+    <input class="input is-small" type="text" name="host" placeholder="C:\path\to\<logname>.evtx">
+  </div>
+</div>
 
-# Header 1
-## Header 2
-### Header 3
+	<br/>
+	<br/>
+	<br/>
 
-- Bulleted
-- List
+      <h2 class="subtitle"></h2>
+		<form action="generate.php" method="post" id="query">
+		<p>Select Event ID:</p>
+		<div class="select">
+		<select class="" id="platform" name="platform">
+		<option option="1">1 - Process Create</option>
+		<option option="3">3 - Network connection detected</option>
+		<option option="7">7 - Image loaded</option>
+		<option option="8">8 - CreateRemoteThread detected</option>
+		<option option="10">10 - Process access</option>	
+		<option option="11">11 - File created</option>
+		<option option="12">12 - Registry object added/deleted</option>
+		<option option="13">13- Registry value set</option>
+		<option option="14">14 - RegObject renamed</option>	
+		<option option="15">15 - File stream created</option>
+		<option option="22">22 - DNS query</option>
+		</select>
+		</div>
+	<br/>
+	<br/>
+	<br/>
+		<p>Select EventData:</p>
+		<div class="select">
+		<select class="" id="action" name="action">
+		<option value="CommandLine">CommandLine</option>
+		<option value="Company">Company</option>
+		<option value="CreationUtcTime">CreationUtcTime</option>
+		<option value="CurrentDirectory">CurrentDirectory</option>
+		<option value="Description">Description</option>
+		<option value="DestinationHostname">DestinationHostname</option>
+		<option value="DestinationIp">DestinationIp</option>
+		<option value="DestinationPort">DestinationPort</option>
+		<option value="HostUrl">HostUrl</option>
+		<option value="Image">Image</option>
+		<option value="ImageLoaded">ImageLoaded</option>
+		<option value="Integrity Level">IntegrityLevel</option>
+		<option value="OriginalFileName">OriginalFileName</option>
+		<option value="ParentCommandLine">ParentCommandLine</option>
+		<option value="ParentImage">ParentImage</option>
+		<option value="ProcessId">ProcessId</option>
+		<option value="QueryName">QueryName</option>
+		<option value="QueryResults">QueryResults</option>
+		<option value="QueryStatus">QueryStatus</option>
+		<option value="Signature">Signature</option>
+		<option value="Signed">Signed</option>
+		<option value="SourceHostname">SourceHostname</option>
+		<option value="SourceImage">SourceImage</option>
+		<option value="SourceIp">SourceIp</option>
+		<option value="SourcePort">SourcePort</option>
+		<option value="StartModule">StartModule</option>
+		<option value="TargetFileName">TargetFileName</option>
+		<option value="TargetImage">TargetImage</option>
+		<option value="TargetObject">TargetObject</option>
+		<option value="TargetProcessId">TargetProcessId</option>
+		<option value="User">User</option>
+		<option value="UtcTime">UtcTime</option>
+		</select>
+		</div>
 
-1. Numbered
-2. List
+	<br/>
+	<br/>
+	<br/>
 
-**Bold** and _Italic_ and `Code` text
+<p> <b>Optional:</b> Set the value for the choosen EventData (e.g DestinationPort):</p>
 
-[Link](url) and ![Image](src)
-```
+		EventData Name:
+<div class="field">
+  <div class="control">
+    <input class="input is-small" type="text" name="port" placeholder="e.g. 4444">
+  </div>
+</div>
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+<br/>
+<br/>
 
-### Jekyll Themes
+<p> Example generated output:</p>
+<pre>
+  <code>
+Get-WinEvent -Path C:\Windows\System32\winevt\Logs\Microsoft-Windows-Sysmon%4Operational.evtx -FilterXPath 
+'*/System/EventID=3 and */EventData/Data[@Name="DestinationPort"] and */EventData/Data=4444
+  </code>
+</pre>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/madret/Powershell-for_Sysmon/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+	<br/>
+	<br/>
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+	<input type="submit" class="button is-success" value="Generate query">
+	</form>
+
+<br/>
+<br/>
+
+<div class="container has-text-centered">
+
+<p>Thanks for using the generator.</p>
+
+<a href="https://example.com">Example.com</a> 
+			</div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
