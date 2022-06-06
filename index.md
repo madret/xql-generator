@@ -119,7 +119,7 @@ Get-WinEvent -Path C:\Windows\System32\winevt\Logs\Microsoft-Windows-Sysmon%4Ope
 
 <p>Thanks for using the generator.</p>
 
-<a href="[https://twitter.com/b41ss]">@b41ss</a> 
+<a href="https://twitter.com/b41ss">@b41ss</a> 
 			</div>
     </div>
   </div>
