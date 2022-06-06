@@ -111,9 +111,8 @@ window.getSelection().removeAllRanges();
 
 <p> Output example:</p>
 <pre>
-  <code id="copy">
-Get-WinEvent -Path C:\Windows\System32\winevt\Logs\Microsoft-Windows-Sysmon%4Operational.evtx -FilterXPath '*/System/EventID=3 and */EventData/Data[@Name="DestinationPort"] and */EventData/Data=4444
-  </code>
+	<code id="copy">Get-WinEvent -Path C:\Windows\System32\winevt\Logs\Microsoft-Windows-Sysmon%4Operational.evtx -FilterXPath '*/System/EventID=3 and */EventData/Data[@Name="DestinationPort"] and */EventData/Data=4444
+	</code>
 <a href="#" onclick="CopyToClipboard('copy');return false;">Copy To clipboard</a>  
 </pre>
 
