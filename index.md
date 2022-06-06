@@ -32,7 +32,6 @@ window.getSelection().removeAllRanges();
 
 	<br/>
 	<br/>
-	<br/>
 
       <h2 class="subtitle"></h2>
 		<form action="generate.php" method="post" id="query">
@@ -52,7 +51,6 @@ window.getSelection().removeAllRanges();
 		<option option="22">22 - DNS query</option>
 		</select>
 		</div>
-	<br/>
 	<br/>
 	<br/>
 		<p>Select EventData:</p>
@@ -93,7 +91,6 @@ window.getSelection().removeAllRanges();
 		</select>
 		</div>
 
-	<br/>
 	<br/>
 	<br/>
 
