@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html>
 
 var survey_options = document.getElementById('survey_options');
 var add_more_fields = document.getElementById('add_more_fields');
@@ -21,7 +21,6 @@ remove_fields.onclick = function(){
   }
 }
 
-<html>
 <head>
   <title>Dynamic Fields - Day #29</title>
   <link rel="stylesheet" type="text/css" href="style.css">
