@@ -22,6 +22,8 @@ window.getSelection().removeAllRanges();
       </h1>
 	<hr/>
 
+<form action="generate.php" method="post">
+
 <p> Set the path where the Sysmon eventlog is located:</p>
 -Path:
 <div class="field">
@@ -34,10 +36,9 @@ window.getSelection().removeAllRanges();
 	<br/>
 
       <h2 class="subtitle"></h2>
-		<form action="generate.php" method="post" id="query">
 		<p>Select Event ID:</p>
 		<div class="select">
-		<select class="" id="platform" name="platform">
+		<select class="" name="event_id">
 		<option option="1">1 - Process Create</option>
 		<option option="3">3 - Network connection detected</option>
 		<option option="7">7 - Image loaded</option>
@@ -55,7 +56,7 @@ window.getSelection().removeAllRanges();
 	<br/>
 		<p>Select EventData:</p>
 		<div class="select">
-		<select class="" id="action" name="action">
+		<select class="" id="action" name="eventdata">
 		<option value="CommandLine">CommandLine</option>
 		<option value="Company">Company</option>
 		<option value="CreationUtcTime">CreationUtcTime</option>
@@ -110,7 +111,7 @@ window.getSelection().removeAllRanges();
 	<br/>
 	<br/>
 	<br/>
-			
+</form>
 <p> Output example:</p>
 			
 <pre>
@@ -125,7 +126,7 @@ window.getSelection().removeAllRanges();
 <p>Thanks for using the generator!</p>
 
 <a href="https://twitter.com/b41ss">@b41ss</a>		
-	</form>
+
     </div>
   </div>
 </section>
