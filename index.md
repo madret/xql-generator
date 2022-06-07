@@ -102,10 +102,15 @@ window.getSelection().removeAllRanges();
     <input class="input is-small" type="text" name="port" placeholder="e.g. 4444">
   </div>
 </div>
+	<br/>
+	<br/>
 
-<br/>
-<br/>
+	<input type="submit" class="button is-success" value="Generate query">
 
+	<br/>
+	<br/>
+	<br/>
+			
 <p> Output example:</p>
 			
 <pre>
@@ -113,11 +118,6 @@ window.getSelection().removeAllRanges();
 </code>
 <a href="#" onclick="CopyToClipboard('copy');return false;">Copy To clipboard</a>  
 </pre>
-
-	<br/>
-	<br/>
-
-	<input type="submit" class="button is-success" value="Generate query">
 
 	<br/>
 	<br/>
