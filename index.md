@@ -1,134 +1,48 @@
-<html>
+<!DOCTYPE html>
 
-<script>
-function CopyToClipboard(id)
-{
-var r = document.createRange();
-r.selectNode(document.getElementById(id));
-window.getSelection().removeAllRanges();
-window.getSelection().addRange(r);
-document.execCommand('copy');
-window.getSelection().removeAllRanges();
+var survey_options = document.getElementById('survey_options');
+var add_more_fields = document.getElementById('add_more_fields');
+var remove_fields = document.getElementById('remove_fields');
+
+add_more_fields.onclick = function(){
+  var newField = document.createElement('input');
+  newField.setAttribute('type','text');
+  newField.setAttribute('name','survey_options[]');
+  newField.setAttribute('class','survey_options');
+  newField.setAttribute('siz',50);
+  newField.setAttribute('placeholder','Another Field');
+  survey_options.appendChild(newField);
 }
-</script>	
-	
+
+remove_fields.onclick = function(){
+  var input_tags = survey_options.getElementsByTagName('input');
+  if(input_tags.length > 2) {
+    survey_options.removeChild(input_tags[(input_tags.length) - 1]);
+  }
+}
+
+<html>
+<head>
+  <title>Dynamic Fields - Day #29</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- include font awesome -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
 <body>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-        Sysmon query <span style="color: red;">generator</span> for Powershell.
-      </h1>
-	<hr/>
-
-<form action="generate.php" method="post">
-
-<p> Set the path where the Sysmon eventlog is located:</p>
--Path:
-<div class="field">
-  <div class="control">
-    <input class="input is-small" type="text" name="host" placeholder="C:\path\to\<logname>.evtx">
-  </div>
-</div>
-
-	<br/>
-	<br/>
-
-      <h2 class="subtitle"></h2>
-		<p>Select Event ID:</p>
-		<div class="select">
-		<select class="" name="event_id">
-		<option option="1">1 - Process Create</option>
-		<option option="3">3 - Network connection detected</option>
-		<option option="7">7 - Image loaded</option>
-		<option option="8">8 - CreateRemoteThread detected</option>
-		<option option="10">10 - Process access</option>	
-		<option option="11">11 - File created</option>
-		<option option="12">12 - Registry object added/deleted</option>
-		<option option="13">13- Registry value set</option>
-		<option option="14">14 - RegObject renamed</option>	
-		<option option="15">15 - File stream created</option>
-		<option option="22">22 - DNS query</option>
-		</select>
-		</div>
-	<br/>
-	<br/>
-		<p>Select EventData:</p>
-		<div class="select">
-		<select class="" id="action" name="eventdata">
-		<option value="CommandLine">CommandLine</option>
-		<option value="Company">Company</option>
-		<option value="CreationUtcTime">CreationUtcTime</option>
-		<option value="CurrentDirectory">CurrentDirectory</option>
-		<option value="Description">Description</option>
-		<option value="DestinationHostname">DestinationHostname</option>
-		<option value="DestinationIp">DestinationIp</option>
-		<option value="DestinationPort">DestinationPort</option>
-		<option value="HostUrl">HostUrl</option>
-		<option value="Image">Image</option>
-		<option value="ImageLoaded">ImageLoaded</option>
-		<option value="Integrity Level">IntegrityLevel</option>
-		<option value="OriginalFileName">OriginalFileName</option>
-		<option value="ParentCommandLine">ParentCommandLine</option>
-		<option value="ParentImage">ParentImage</option>
-		<option value="ProcessId">ProcessId</option>
-		<option value="QueryName">QueryName</option>
-		<option value="QueryResults">QueryResults</option>
-		<option value="QueryStatus">QueryStatus</option>
-		<option value="Signature">Signature</option>
-		<option value="Signed">Signed</option>
-		<option value="SourceHostname">SourceHostname</option>
-		<option value="SourceImage">SourceImage</option>
-		<option value="SourceIp">SourceIp</option>
-		<option value="SourcePort">SourcePort</option>
-		<option value="StartModule">StartModule</option>
-		<option value="TargetFileName">TargetFileName</option>
-		<option value="TargetImage">TargetImage</option>
-		<option value="TargetObject">TargetObject</option>
-		<option value="TargetProcessId">TargetProcessId</option>
-		<option value="User">User</option>
-		<option value="UtcTime">UtcTime</option>
-		</select>
-		</div>
-
-	<br/>
-	<br/>
-
-<p> <b>Optional:</b> Set the value for the choosen EventData (e.g DestinationPort):</p>
-
-		EventData Name:
-<div class="field">
-  <div class="control">
-    <input class="input is-small" type="text" name="port" placeholder="e.g. 4444">
-  </div>
-</div>
-	<br/>
-	<br/>
-
-	<input type="submit" class="button is-success" value="Generate query">
-
-	<br/>
-	<br/>
-	<br/>
-</form>
-<p> Output example:</p>
-			
-<pre>
-<code id="copy">Get-WinEvent -Path C:\Windows\System32\winevt\Logs\Microsoft-Windows-Sysmon%4Operational.evtx -FilterXPath '*/System/EventID=3 and */EventData/Data[@Name="DestinationPort"] and */EventData/Data=4444
-</code>
-<a href="#" onclick="CopyToClipboard('copy');return false;">Copy To clipboard</a>  
-</pre>
-
-	<br/>
-	<br/>
-			
-<p>Thanks for using the generator!</p>
-
-<a href="https://twitter.com/b41ss">@b41ss</a>		
-
+  <h1>Dynamic Fields Javascript</h1>
+  <div class="wrapper">
+    <div id="survey_options">
+      <input type="text" name="survey_options[]" class="survey_options" size="50" placeholder="Name">
+      <input type="text" name="survey_options[]" class="survey_options" size="50" placeholder="Email">
+      <input type="text" name="survey_options[]" class="survey_options" size="50" placeholder="Another Field">
+    </div>
+    <div class="controls">
+      <a href="#" id="add_more_fields"><i class="fa fa-plus"></i>Add More</a>
+      <a href="#" id="remove_fields"><i class="fa fa-plus"></i>Remove Field</a>
     </div>
   </div>
-</section>
+<script src="script.js"></script>
 </body>
 </html>
