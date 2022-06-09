@@ -53,12 +53,11 @@ window.getSelection().removeAllRanges();
 }
 </script>
 
-
 </head>
 <body>
 
     <p>- Set the path where the Sysmon eventlog is located:</p>
-    <p><input type="text" id="path" value="" placeholder="C:\path\to\<logfile>.evtx"></p>
+    <p><input class="boks" type="text" id="path" value="" placeholder="C:\path\to\<logfile>.evtx"></p>
 
 	<br/>
 
@@ -119,7 +118,7 @@ window.getSelection().removeAllRanges();
 	<br/>
     <p>- Set the Name value for the choosen EventData:</p> 
 	<p><b>For example:</b> Eventdata=DestinationPort <span style="color: red;">And</span> Name=4444 (standard MSF portnumber).</p>  
-    <p><input type="text" id="eventname" value="" placeholder="e.g. 4444"></p>
+    <p><input type="text" class="boks" id="eventname" value="" placeholder="e.g. 4444"></p>
 	
 	<br/>
 
