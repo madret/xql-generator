@@ -2,7 +2,7 @@
 Hunting through sysmon event logs with the Powershell cmdlet generator.
 
 Visit the github page:
-https://madret.github.io/Sysmon_Powershell_Generator/
+[https://madret.github.io/Sysmon_Powershell_Generator/](https://madret.github.io/cmdlet-generator/)
 
 ## Overview
 The command line is typically used over the Event Viewer GUI because it can allow for further granular control and filtering that the GUI does not offer.
