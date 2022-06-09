@@ -32,7 +32,7 @@ pre {
 	
 	}
 .eventid, .eventdata {
-height:23px;	
+height:35px;	
 	}	
 	
 </style>
