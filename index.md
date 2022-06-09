@@ -31,7 +31,7 @@ pre {
  height:23px;
 	
 	}
-.eventid, .eventdata {
+.select {
 height:35px;	
 	}	
 	
