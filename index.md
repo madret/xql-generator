@@ -27,6 +27,7 @@ pre {
 }
 	
 .boks {
+ font-size:large;
  border-radius: 20px;
  width:200px;
  height:22px;
