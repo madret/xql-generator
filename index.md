@@ -32,7 +32,7 @@ pre {
 	
 	}
 .select {
-height:25px;	
+height:23px;	
 	}	
 	
 </style>
