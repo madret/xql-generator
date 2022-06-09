@@ -34,7 +34,8 @@ pre {
 	
 	}
 .select {
-height:30px;	
+height:30px;
+font-size:large;
 	}	
 	
 </style>
