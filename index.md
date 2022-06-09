@@ -2,9 +2,8 @@
 
 <head>
 
-<h1 class="title"> Powershell cmdlet <span style="color: red;">generator</span>. 
-To assist in hunting through Sysmon event logs.</h1>
-<hr/>
+	<h1 class="title"> Powershell cmdlet <span style="color: red;">generator</span>.</h1>
+	<h1>To assist in hunting through Sysmon event logs.</h1><hr/>
 	
 	<title> Cmdlet-Generator</title>
 <style>
