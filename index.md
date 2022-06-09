@@ -28,9 +28,12 @@ pre {
 	
 .boks {
  width:200px;
- height:30px;
+ height:25px;
 	
 	}
+.select {
+height:25px;	
+	}	
 	
 </style>
 
