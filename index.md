@@ -5,6 +5,7 @@
 <h1 class="title"> Hunting through sysmon event logs with the Powershell cmdlet <span style="color: red;">generator</span>.</h1>
 <hr/>
 
+	<title> Cmdlet-Generator</title>
 <style>
 pre {
   border-style: inset;
