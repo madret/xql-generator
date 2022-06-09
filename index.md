@@ -12,6 +12,18 @@ pre {
   display:inline-block;
   margin: 0;
 }
+	
+.block {
+  display: block;
+  width: 300px;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}	
 </style>
 
     <script>
@@ -115,7 +127,7 @@ window.getSelection().removeAllRanges();
 	<br/>
 	<br/>
 
-<p><button type="button" onclick="myFunction()">Generate Powershell command</button></p>
+<p><button class="block" type="button" onclick="myFunction()">Generate Powershell command</button></p>
 
 	<br/>
 	<br/>
@@ -130,8 +142,7 @@ window.getSelection().removeAllRanges();
 
 </body>
 
- <p>This sloppy hobby project is brought to you by:</p>
-
+<p>This sloppy hobby project is brought to you by:</p>
 <a href="https://twitter.com/b41ss">@b41ss</a>	 
 <p>Cheers!</p>
 </html>
