@@ -127,7 +127,7 @@ window.getSelection().removeAllRanges();
 	<br/>
 	<br/>
 
-<p><button class="block" type="button" onclick="myFunction()">Generate Powershell command</button></p>
+	<p><button class="block" type="button" onclick="myFunction()"><b>Generate Powershell command</b></button></p>
 
 	<br/>
 	<br/>
