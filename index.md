@@ -29,7 +29,7 @@ pre {
 .boks {
  font-size:large;
  border-radius: 10px;
- width:200px;
+ width:220px;
  height:22px;
 	
 	}
