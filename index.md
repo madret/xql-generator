@@ -119,7 +119,7 @@ window.getSelection().removeAllRanges();
 	<br/>
 	<br/>
     <p>- Set the Name value for the choosen EventData:</p> 
-    <p><b>For example:</b> <span style="color: red;">If</span> the selected Eventdata=DestinationPort <span style="color: red;">Then</span> Name=4444 (standard MSF portnumber).</p>  
+	<p><b>For example:</b> Eventdata=DestinationPort <span style="color: red;">And</span> Name=4444 (standard MSF portnumber).</p>  
     <p><input type="text" id="eventname" value="" placeholder="e.g. 4444"></p>
 	
 	<br/>
