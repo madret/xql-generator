@@ -17,7 +17,7 @@ pre {
   display: block;
   width: 300px;
   border: none;
-  background-color: #04AA6D;
+  background-color: #1E90FF;
   color: white;
   padding: 14px 28px;
   font-size: 16px;
