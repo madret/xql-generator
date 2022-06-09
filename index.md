@@ -1,6 +1,35 @@
+<!DOCTYPE html>
 <html>
 
-<script>
+<head>
+
+<h1 class="title"> Powershell cmdlet <span style="color: red;">generator</span> for hunting through Sysmon event logs. </h1>
+<hr/>
+
+<style>
+pre {
+  border-style: inset;
+  word-wrap:break-word;
+  display:inline-block;
+  margin: 0;
+}
+</style>
+
+    <script>
+
+function myFunction() {
+  document.getElementById("event_id").style.visibility = "hidden";
+}
+      
+    // Here the value is stored in new variable x 
+    function myFunction() {
+        var x = document.getElementById("path").value;
+        var y = document.getElementById("eventid").value;
+        var z = document.getElementById("eventdata").value;
+        var q = document.getElementById("eventname").value;
+        document.getElementById("demo").innerHTML = "Get-WinEvent -Path " + x + " -FilterXPath '*/System/EventID=" + y + ' and */EventData/Data[@Name="' + z +'"] and */EventData/Data=' + q + "'";
+    }
+  
 function CopyToClipboard(id)
 {
 var r = document.createRange();
@@ -10,53 +39,38 @@ window.getSelection().addRange(r);
 document.execCommand('copy');
 window.getSelection().removeAllRanges();
 }
-</script>	
-	
+</script>
+
+
+</head>
 <body>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-        Sysmon query <span style="color: red;">generator</span> for Powershell.
-      </h1>
-	<hr/>
-
-<form action="generate.php" method="post">
-
-<p> Set the path where the Sysmon eventlog is located:</p>
--Path:
-<div class="field">
-  <div class="control">
-    <input class="input is-small" type="text" name="host" placeholder="C:\path\to\<logname>.evtx">
-  </div>
-</div>
+    <p>- Set the path where the Sysmon eventlog is located:</p>
+    <p><input type="text" id="path" value="" placeholder="C:\path\to\<logfile>.evtx"></p>
 
 	<br/>
-	<br/>
 
-      <h2 class="subtitle"></h2>
-		<p>Select Event ID:</p>
-		<div class="select">
-		<select class="" name="event_id">
-		<option option="1">1 - Process Create</option>
-		<option option="3">3 - Network connection detected</option>
-		<option option="7">7 - Image loaded</option>
-		<option option="8">8 - CreateRemoteThread detected</option>
-		<option option="10">10 - Process access</option>	
-		<option option="11">11 - File created</option>
-		<option option="12">12 - Registry object added/deleted</option>
-		<option option="13">13- Registry value set</option>
-		<option option="14">14 - RegObject renamed</option>	
-		<option option="15">15 - File stream created</option>
-		<option option="22">22 - DNS query</option>
+    <p>- Select Event ID:</p>
+    		<select class="select" id="eventid">
+		<option value="1">1 - Process Creation</option>
+		<option value="3">3 - Network connection detected</option>
+		<option value="7">7 - Image loaded</option>
+		<option value="8">8 - CreateRemoteThread detected</option>
+		<option value="10">10 - Process access</option>	
+		<option value="11">11 - File created</option>
+		<option value="12">12 - Registry object added/deleted</option>
+		<option value="13">13- Registry value set</option>
+		<option value="14">14 - RegObject renamed</option>	
+		<option value="15">15 - File stream created</option>
+		<option value="22">22 - DNS query</option>
 		</select>
-		</div>
+
 	<br/>
 	<br/>
-		<p>Select EventData:</p>
-		<div class="select">
-		<select class="" id="action" name="eventdata">
+	<br/>
+    
+    <p>- Select EventData:</p>
+		<select class="select" id="eventdata">
 		<option value="CommandLine">CommandLine</option>
 		<option value="Company">Company</option>
 		<option value="CreationUtcTime">CreationUtcTime</option>
@@ -90,45 +104,32 @@ window.getSelection().removeAllRanges();
 		<option value="User">User</option>
 		<option value="UtcTime">UtcTime</option>
 		</select>
-		</div>
-
-	<br/>
-	<br/>
-
-<p> <b>Optional:</b> Set the value for the choosen EventData (e.g DestinationPort):</p>
-
-		EventData Name:
-<div class="field">
-  <div class="control">
-    <input class="input is-small" type="text" name="port" placeholder="e.g. 4444">
-  </div>
-</div>
-	<br/>
-	<br/>
-
-	<input type="submit" class="button is-success" value="Generate query">
 
 	<br/>
 	<br/>
 	<br/>
-</form>
-<p> Output example:</p>
-			
-<pre>
-<code id="copy">Get-WinEvent -Path C:\Windows\System32\winevt\Logs\Microsoft-Windows-Sysmon%4Operational.evtx -FilterXPath '*/System/EventID=3 and */EventData/Data[@Name="DestinationPort"] and */EventData/Data=4444
-</code>
-<a href="#" onclick="CopyToClipboard('copy');return false;">Copy To clipboard</a>  
+
+    <p>- Set the Name value for the choosen EventData:</p> 
+    <p><b>For example:</b> <span style="color: red;">IF</span> the selected Eventdata=DestinationPort <span style="color: red;">THEN</span> Name=4444 (standard MSF portnumber).</p>  
+    <p><input type="text" id="eventname" value="" placeholder="e.g. 4444"></p>
+	
+	<br/>
+	<br/>
+
+<p><button type="button" onclick="myFunction()">Generate Powershell command</button></p>
+
+	<br/>
+	<br/>
+
+<p> Output:</p>
+
+<pre id="demo">
+<code id="copy">Get-WinEvent -Path C:\.... -FilterXPath ..... and .... and .... </code>
 </pre>
+      
+<!-- <a href="#" onclick="CopyToClipboard('copy');return false;">Copy To clipboard</a> -->
 
-	<br/>
-	<br/>
-			
-<p>Thanks for using the generator!</p>
-
-<a href="https://twitter.com/b41ss">@b41ss</a>		
-
-    </div>
-  </div>
-</section>
 </body>
+
+  
 </html>
