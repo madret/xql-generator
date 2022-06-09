@@ -24,7 +24,14 @@ pre {
   font-size: 16px;
   cursor: pointer;
   text-align: center;
-}	
+}
+	
+.boks {
+ width:200px;
+ height:50px;
+	
+	}
+	
 </style>
 
     <script>
