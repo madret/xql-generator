@@ -130,5 +130,8 @@ window.getSelection().removeAllRanges();
 
 </body>
 
-  
+ <p>This sloppy hobby project is brought to you by:</p>
+
+<a href="https://twitter.com/b41ss">@b41ss</a>	 
+<p>Cheers!</p>
 </html>
