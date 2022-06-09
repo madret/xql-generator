@@ -27,12 +27,13 @@ pre {
 }
 	
 .boks {
+ border-radius: 25px;
  width:200px;
- height:23px;
+ height:22px;
 	
 	}
 .select {
-height:35px;	
+height:30px;	
 	}	
 	
 </style>
