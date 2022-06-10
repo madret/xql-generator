@@ -16,7 +16,7 @@ pre {
 	
 .block {
   display: block;
-  width: 300px;
+  width: 350px;
   border: none;
   background-color: #1E90FF;
   color: white;
