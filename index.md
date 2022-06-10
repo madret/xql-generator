@@ -98,7 +98,10 @@ window.getSelection().removeAllRanges();
 		<option value="DestinationIp">DestinationIp</option>
 		<option value="SourceIp">SourceIp</option>
 		<option value="SourcePort">SourcePort</option>
+		<option value="SourceImage">SourceImage</option>
 		<option value="TargetImage">TargetImage</option>
+		<option value="TargetFileName">TargetFileName</option>
+		</optgroup>
 		<optgroup label="More:">
 		<option value="CommandLine">CommandLine</option>
 		<option value="Company">Company</option>
@@ -120,19 +123,19 @@ window.getSelection().removeAllRanges();
 		<option value="Signature">Signature</option>
 		<option value="Signed">Signed</option>
 		<option value="SourceHostname">SourceHostname</option>
-		<option value="SourceImage">SourceImage</option>
 		<option value="StartModule">StartModule</option>
-		<option value="TargetFileName">TargetFileName</option>
 		<option value="TargetObject">TargetObject</option>
 		<option value="TargetProcessId">TargetProcessId</option>
 		<option value="User">User</option>
 		<option value="UtcTime">UtcTime</option>
+		</optgroup>
 		</select>
 
 	<br/>
 	<br/>
+	
     <p>- Set the Name value for the choosen EventData:</p> 
-	<p><b>For example:</b> Eventdata=DestinationPort <span style="color: red;">And</span> Name=4444 (standard MSF portnumber).</p>  
+    <p><b>For example:</b> Eventdata=DestinationPort <span style="color: red;">And</span> Name=4444 (standard MSF portnumber).</p>  
     <p><input type="text" class="boks" id="eventname" value="" placeholder="e.g. 4444"></p>
 	
 	<br/>
