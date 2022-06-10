@@ -72,7 +72,7 @@ window.getSelection().removeAllRanges();
     <p>- Set the path where the Sysmon eventlog is located:</p>
     <p><input class="boks" type="text" id="path" value="" placeholder="C:\path\to\<logfile>.evtx"></p>
 
-	<br/>
+    <br/>
 
     <p>- Select Event ID:</p>
     		<select class="select" id="eventid">
@@ -89,13 +89,14 @@ window.getSelection().removeAllRanges();
 		<option value="22">22 - DNS query</option>
 		</select>
 
-	<br/>
-    	<br/>
+    <br/>
+    <br/>
     <p>- Select EventData:</p>
 		<select class="select" id="eventdata">
 		<optgroup label="Frequently used:">
 	  	<option value="DestinationPort">DestinationPort</option>
 		<option value="DestinationIp">DestinationIp</option>
+		<option value="Image">Image</option>
 		<option value="SourceIp">SourceIp</option>
 		<option value="SourcePort">SourcePort</option>
 		<option value="SourceImage">SourceImage</option>
@@ -110,7 +111,6 @@ window.getSelection().removeAllRanges();
 		<option value="Description">Description</option>
 		<option value="DestinationHostname">DestinationHostname</option>
 		<option value="HostUrl">HostUrl</option>
-		<option value="Image">Image</option>
 		<option value="ImageLoaded">ImageLoaded</option>
 		<option value="Integrity Level">IntegrityLevel</option>
 		<option value="OriginalFileName">OriginalFileName</option>
@@ -131,18 +131,18 @@ window.getSelection().removeAllRanges();
 		</optgroup>
 		</select>
 
-	<br/>
-	<br/>
+    <br/>
+    <br/>
 	
     <p>- Set the Name value for the choosen EventData:</p> 
     <p><b>For example:</b> Eventdata=DestinationPort <span style="color: red;">And</span> Name=4444 (standard MSF portnumber).</p>  
     <p><input type="text" class="boks" id="eventname" value="" placeholder="e.g. 4444"></p>
 	
-	<br/>
+    <br/>
 
-	<p><button class="block" type="button" onclick="myFunction()"><b>Generate Powershell command</b></button></p>
+    <p><button class="block" type="button" onclick="myFunction()"><b>Generate Powershell command</b></button></p>
 
-	<br/>
+    <br/>
 
 <p> Output:</p>
 
