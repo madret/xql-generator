@@ -93,14 +93,19 @@ window.getSelection().removeAllRanges();
     	<br/>
     <p>- Select EventData:</p>
 		<select class="select" id="eventdata">
+		<optgroup label="Frequently used:">
+	  	<option value="DestinationPort">DestinationPort</option>
+		<option value="DestinationIp">DestinationIp</option>
+		<option value="SourceIp">SourceIp</option>
+		<option value="SourcePort">SourcePort</option>
+		<option value="TargetImage">TargetImage</option>
+		<optgroup label="More:">
 		<option value="CommandLine">CommandLine</option>
 		<option value="Company">Company</option>
 		<option value="CreationUtcTime">CreationUtcTime</option>
 		<option value="CurrentDirectory">CurrentDirectory</option>
 		<option value="Description">Description</option>
 		<option value="DestinationHostname">DestinationHostname</option>
-		<option value="DestinationIp">DestinationIp</option>
-		<option value="DestinationPort">DestinationPort</option>
 		<option value="HostUrl">HostUrl</option>
 		<option value="Image">Image</option>
 		<option value="ImageLoaded">ImageLoaded</option>
@@ -116,11 +121,8 @@ window.getSelection().removeAllRanges();
 		<option value="Signed">Signed</option>
 		<option value="SourceHostname">SourceHostname</option>
 		<option value="SourceImage">SourceImage</option>
-		<option value="SourceIp">SourceIp</option>
-		<option value="SourcePort">SourcePort</option>
 		<option value="StartModule">StartModule</option>
 		<option value="TargetFileName">TargetFileName</option>
-		<option value="TargetImage">TargetImage</option>
 		<option value="TargetObject">TargetObject</option>
 		<option value="TargetProcessId">TargetProcessId</option>
 		<option value="User">User</option>
