@@ -98,8 +98,8 @@ window.getSelection().removeAllRanges();
 		<option value="DestinationIp">DestinationIp</option>
 		<option value="DestinationHostname">DestinationHostname</option>
 		<option value="Image">Image</option>
-		<option value="SourceIp">SourceIp</option>
 		<option value="SourcePort">SourcePort</option>
+		<option value="SourceIp">SourceIp</option>
 		<option value="SourceHostname">SourceHostname</option>
 		<option value="SourceImage">SourceImage</option>
 		<option value="TargetImage">TargetImage</option>
