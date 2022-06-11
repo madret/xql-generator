@@ -96,9 +96,11 @@ window.getSelection().removeAllRanges();
 		<optgroup label="Frequently used:">
 	  	<option value="DestinationPort">DestinationPort</option>
 		<option value="DestinationIp">DestinationIp</option>
+		<option value="DestinationHostname">DestinationHostname</option>
 		<option value="Image">Image</option>
 		<option value="SourceIp">SourceIp</option>
 		<option value="SourcePort">SourcePort</option>
+		<option value="SourceHostname">SourceHostname</option>
 		<option value="SourceImage">SourceImage</option>
 		<option value="TargetImage">TargetImage</option>
 		<option value="TargetFileName">TargetFileName</option>
@@ -109,7 +111,6 @@ window.getSelection().removeAllRanges();
 		<option value="CreationUtcTime">CreationUtcTime</option>
 		<option value="CurrentDirectory">CurrentDirectory</option>
 		<option value="Description">Description</option>
-		<option value="DestinationHostname">DestinationHostname</option>
 		<option value="HostUrl">HostUrl</option>
 		<option value="ImageLoaded">ImageLoaded</option>
 		<option value="Integrity Level">IntegrityLevel</option>
@@ -122,7 +123,6 @@ window.getSelection().removeAllRanges();
 		<option value="QueryStatus">QueryStatus</option>
 		<option value="Signature">Signature</option>
 		<option value="Signed">Signed</option>
-		<option value="SourceHostname">SourceHostname</option>
 		<option value="StartModule">StartModule</option>
 		<option value="TargetObject">TargetObject</option>
 		<option value="TargetProcessId">TargetProcessId</option>
