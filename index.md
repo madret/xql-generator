@@ -3,7 +3,7 @@
 <head>
 
 	<h1 class="title"> Powershell cmdlet <span style="color: red;">generator</span>.</h1>
-	<h1>To assist in hunting through Sysmon event logs.</h1><hr/>
+	<h1>To assist hunting for the events that matter.</h1><hr/>
 	
 	<title> Cmdlet-Generator</title>
 <style>
@@ -69,7 +69,7 @@ window.getSelection().removeAllRanges();
 </head>
 <body>
 
-    <p>- Set the path where the Sysmon eventlog is located:</p>
+    <p>- Set the path where the Windows event logs are located:</p>
     <p><input class="boks" type="text" id="path" value="" placeholder="C:\path\to\<logfile>.evtx"></p>
 
     <br/>
