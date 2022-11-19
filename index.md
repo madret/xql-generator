@@ -70,7 +70,7 @@ window.getSelection().removeAllRanges();
 <body>
 
     <p>- Set the path where the Windows event logs are located:</p>
-    <p><input class="boks" type="text" id="path" value="" placeholder="C:\Windows\System32\winevt\Logs\Security.evtx"></p>
+    <p><input class="boks" type="text" id="path" value="C:\Windows\System32\winevt\Logs\Security.evtx" placeholder="C:\Windows\System32\winevt\Logs\Security.evtx"></p>
 
     <br/>
 
