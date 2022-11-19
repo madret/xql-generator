@@ -52,7 +52,7 @@ function myFunction() {
         var y = document.getElementById("eventid").value;
         var z = document.getElementById("eventdata").value;
         var q = document.getElementById("eventname").value;
-        document.getElementById("demo").innerHTML = "Get-WinEvent -LogName " + x + " -FilterXPath '*/System/EventID=" + y + ' | Select-Object TimeCreated, Id, LevelDisplayName, ProcessId, Message | Format-Table -AutoSize';
+        document.getElementById("demo").innerHTML = "Get-WinEvent -LogName " + x + " -FilterXPath '*/System/EventID=" + y + " | Select-Object TimeCreated, Id, LevelDisplayName, ProcessId, Message | Format-Table -AutoSize";
     }
   
 function CopyToClipboard(id)
