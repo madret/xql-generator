@@ -3,7 +3,7 @@
 <head>
 
 	<h1 class="title"> Powershell cmdlet <span style="color: red;">generator</span>.</h1>
-	<h1>To assist hunting for the events that matter.</h1><hr/>
+	<h1>To assist in hunting for the events that matter.</h1><hr/>
 	
 	<title> Cmdlet-Generator</title>
 <style>
@@ -70,23 +70,15 @@ window.getSelection().removeAllRanges();
 <body>
 
     <p>- Set the path where the Windows event logs are located:</p>
-    <p><input class="boks" type="text" id="path" value="" placeholder="C:\path\to\<logfile>.evtx"></p>
+    <p><input class="boks" type="text" id="path" value="" placeholder="C:\Windows\System32\winevt\Logs\Security.evtx"></p>
 
     <br/>
 
     <p>- Select Event ID:</p>
     		<select class="select" id="eventid">
-		<option value="1">1 - Process Creation</option>
-		<option value="3">3 - Network connection detected</option>
-		<option value="7">7 - Image loaded</option>
-		<option value="8">8 - CreateRemoteThread detected</option>
-		<option value="10">10 - Process access</option>	
-		<option value="11">11 - File created</option>
-		<option value="12">12 - Registry object added/deleted</option>
-		<option value="13">13- Registry value set</option>
-		<option value="14">14 - RegObject renamed</option>	
-		<option value="15">15 - File stream created</option>
-		<option value="22">22 - DNS query</option>
+		<option value="4625">4625 - An account failed to log on</option>
+		<option value="4740">4740 - A user account was locked out</option>
+		<option value="4771">4771 - Kerberos pre-authentication failed</option>
 		</select>
 
     <br/>
