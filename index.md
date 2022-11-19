@@ -67,7 +67,7 @@ window.getSelection().removeAllRanges();
 </head>
 <body>
 
-    <p>- Select the log:</p>
+    <p>- Enter which log:</p>
     <p><input class="boks" type="text" id="path" value="'Security'" placeholder="'Security'"></p>
 
     <br/>
