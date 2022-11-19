@@ -52,7 +52,7 @@ function myFunction() {
         var y = document.getElementById("eventid").value;
         var z = document.getElementById("eventdata").value;
         var q = document.getElementById("eventname").value;
-        document.getElementById("demo").innerHTML = "Get-WinEvent -Path " + x + " -FilterXPath '*/System/EventID=" + y + ' and */EventData/Data[@Name="' + z +'"] and */EventData/Data=' + q + "'";
+        document.getElementById("demo").innerHTML = "Get-WinEvent -LogName " + x + " -FilterXPath '*/System/EventID=" + y + ' | Select-Object TimeCreated, Id, LevelDisplayName, ProcessId, Message | Format-Table -AutoSize' + z +'"] and */EventData/Data=' + q + "'";
     }
   
 function CopyToClipboard(id)
@@ -69,8 +69,8 @@ window.getSelection().removeAllRanges();
 </head>
 <body>
 
-    <p>- Set the path where the Windows event logs are located:</p>
-    <p><input class="boks" type="text" id="path" value="C:\Windows\System32\winevt\Logs\Security.evtx" placeholder="C:\Windows\System32\winevt\Logs\Security.evtx"></p>
+    <p>- Select the log:</p>
+    <p><input class="boks" type="text" id="path" value="'Security'" placeholder="'Security'"></p>
 
     <br/>
 
@@ -139,7 +139,7 @@ window.getSelection().removeAllRanges();
 <p> Output:</p>
 
 <pre id="demo">
-<code id="copy">Get-WinEvent -Path C:\.... -FilterXPath ..... and .... and .... </code>
+<code id="copy">Get-WinEvent -LogName C:\.... -FilterXPath ..... and .... and .... </code>
 </pre>
       
 <!-- <a href="#" onclick="CopyToClipboard('copy');return false;">Copy To clipboard</a> -->
