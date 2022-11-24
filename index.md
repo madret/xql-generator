@@ -52,7 +52,7 @@ function myFunction() {
         var y = document.getElementById("eventid").value;
         var z = document.getElementById("eventdata").value;
         var q = document.getElementById("eventname").value;
-        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + '"' + x + '"' + z;
+        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + '"*' + x + '"' + z;
     }
   
 function CopyToClipboard(id)
@@ -75,7 +75,7 @@ window.getSelection().removeAllRanges();
 	<option value="| filter action_local_ip = ">Local IP address (connections from)</option>
 	<option value="| filter action_remote_ip = ">Remote IP address (connections to)</option>
 	<option value="| filter agent_hostname = ">Device name (Workstation)</option>
-	<option value="| filter actor_effective_username = *">Username</option>
+	<option value="| filter actor_effective_username = ">Username</option>
 	<option value="| filter dst_action_external_hostname = ">Hostname</option>
 	</select>
 
