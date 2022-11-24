@@ -73,6 +73,8 @@ window.getSelection().removeAllRanges();
         <select class="select" id="filter1">
 	<option value="| filter action_local_ip = ">Local IP address (connections from)</option>
 	<option value="| filter action_remote_ip = ">Remote IP address (connections to)</option>
+	<option value="| filter agent_hostname ">Device name (Workstation)</option>
+	<option value="| filter actor_effective_username ">Username</option>
 	<option value="| filter dst_action_external_hostname ">Hostname (example.com)</option>
 	</select>
 
