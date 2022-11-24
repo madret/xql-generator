@@ -3,9 +3,9 @@
 <head>
 
 	<h1 class="title"> XQL query <span style="color: red;">generator</span>.</h1>
-	<h1>To assist in hunting for the events that matter.</h1><hr/>
+	<h1>To assist in hunting for events that matter.</h1><hr/>
 	
-	<title>XQL-Query Generator</title>
+	<title> XQL-Generator</title>
 <style>
 pre {
   border-style: inset;
@@ -19,7 +19,7 @@ pre {
   width: 350px;
   border: none;
   background-color: #00ff99;
-  color: white;
+  color: black;
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
@@ -33,7 +33,6 @@ pre {
  height:22px;
 	
 	}
-	
 .select {
 height:30px;
 font-size:large;
@@ -49,12 +48,13 @@ function myFunction() {
       
     // Here the value is stored in new variable x 
     function myFunction() {
-        var y = document.getElementById("filter1").value;
-        var x = document.getElementById("path").value;
+        var x = document.getElementById("filter1").value;
+        var y = document.getElementById("path").value;
         var z = document.getElementById("unit").value;
-        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + "'" + x + "'" ;}
+        document.getElementById("demo").innerHTML = "dataset = xdr_data " + x + "'" + y + "'" + z;}
   
 function CopyToClipboard(id)
+{
 var r = document.createRange();
 r.selectNode(document.getElementById(id));
 window.getSelection().removeAllRanges();
@@ -66,42 +66,30 @@ window.getSelection().removeAllRanges();
 
 </head>
 <body>
-	
-     <p>- Select filter:</p>
-        <select class="select" id="filter1">
-	<option value="| filter action_local_ip = ">Local IP address (connections from)</option>
-	<option value="| filter action_remote_ip = ">Remote IP address (connections to)</option>
-	<option value="| filter agent_hostname ">Device name (Workstation)</option>
-	<option value="| filter actor_effective_username ">Username</option>
-	<option value="| filter dst_action_external_hostname ">Hostname (example.com)</option>
-	</select>
-
-    <br/>
-    <br/>
-    <br/>
 
     <p>- Enter IP address or hostname:</p>
-    <p><input class="boks" type="text" id="path" value="" placeholder="192.168."></p>
+    <p><input class="boks" type="text" id="path" value="" placeholder="192.168..."></p>
 
     <br/>
-    <br/>
-	
-    <p>- Select mode:</p>
-		<select class="select" id="unit">
+
+    <p>- Select Event ID:</p>
+    		<select class="select" id="eventid">
 	  	<option value="| fields _time, agent_ip_addresses, agent_hostname, actor_effective_username, action_local_ip, action_local_port, action_remote_ip, action_remote_port, actor_process_image_name, actor_process_command_line, actor_process_os_pid, actor_process_signature_status, agent_os_type">Network mode</option>
 		<option value="| fields _time, agent_ip_addresses, actor_process_image_name, actor_process_command_line, actor_process_os_pid, actor_process_signature_status, agent_hostname, actor_effective_username, action_local_ip, action_local_port, action_remote_ip, action_remote_port, agent_os_type">Debug mode</option>
 		</select>
+
 	
     <br/>
+    <br/>
 
-    <p><button class="block" type="button" onclick="myFunction()"><b>Generate XQL query</b></button></p>
+    <p><button class="block" type="button" onclick="myFunction()"><b>Generate XQL command</b></button></p>
 
     <br/>
 
 <p> Output:</p>
 
 <pre id="demo">
-<code id="copy">Results..</code>
+<code id="copy">Get-WinEvent -LogName 'Security' -FilterXPath ..... and .... and .... </code>
 </pre>
       
 <!-- <a href="#" onclick="CopyToClipboard('copy');return false;">Copy To clipboard</a> -->
