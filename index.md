@@ -74,12 +74,14 @@ window.getSelection().removeAllRanges();
 
     <br/>
 
-    <p>- Select Event ID:</p>
-    		<select class="select" id="eventid">
-		<option value="4625">4625 - An account failed to log on</option>
-		<option value="4740">4740 - A user account was locked out</option>
-		<option value="4771">4771 - Kerberos pre-authentication failed</option>
-		</select>
+    <p>- Select filter:</p>
+    	<select class="select" id="filter1">
+	<option value="| filter action_local_ip = ">Local IP address (connections from)</option>
+	<option value="| filter action_remote_ip = ">Remote IP address (connections to)</option>
+	<option value="| filter agent_hostname ">Device name (Workstation)</option>
+	<option value="| filter actor_effective_username ">Username</option>
+	<option value="| filter dst_action_external_hostname ">Hostname (example.com)</option>
+	</select>
 
     <br/>
     <br/>
