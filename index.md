@@ -82,7 +82,7 @@ window.getSelection().removeAllRanges();
     <br/> 
     <br/>
     <p>- Enter IP address or hostname:</p>
-	<p><input class="boks" type="text" id="path" placeholder="<IP> / <Hostname> / <Username>"></p>
+	<p><input class="boks" type="text" id="path" placeholder="<IP> / <Hostname> / ..."></p>
 
     <br/>
     <p>- Select mode:</p>
