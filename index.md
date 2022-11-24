@@ -68,13 +68,9 @@ window.getSelection().removeAllRanges();
 
 </head>
 <body>
+	
 
-    <p>- Select the log:</p>
-    <p><input class="boks" type="text" id="path" placeholder="192.168..."></p>
-
-    <br/>
-
-    <p>- Select Event ID:</p>
+	    <p>- Select filter:</p>
     	<select class="select" id="eventid">
 	<option value="| filter action_local_ip = ">Local IP address (connections from)</option>
 	<option value="| filter action_remote_ip = ">Remote IP address (connections to)</option>
@@ -82,6 +78,10 @@ window.getSelection().removeAllRanges();
 	<option value="| filter actor_effective_username ">Username</option>
 	<option value="| filter dst_action_external_hostname ">Hostname</option>
 	</select>
+
+    <br/> 	
+    <p>- Enter IP address or hostname:</p>
+	<p><input class="boks" type="text" id="path" placeholder="192.168..."></p>
 
     <br/>
     <br/>
