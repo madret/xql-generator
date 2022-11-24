@@ -2,10 +2,10 @@
 
 <head>
 
-	<h1 class="title"> Powershell cmdlet <span style="color: red;">generator</span>.</h1>
-	<h1>To assist in hunting for the events that matter.</h1><hr/>
+	<h1 class="title"> XQL query <span style="color: red;">generator</span>.</h1>
+	<h1>To assist in hunting for events that matter.</h1><hr/>
 	
-	<title> Cmdlet-Generator</title>
+	<title> XQL-Generator</title>
 <style>
 pre {
   border-style: inset;
@@ -18,8 +18,8 @@ pre {
   display: block;
   width: 350px;
   border: none;
-  background-color: #1E90FF;
-  color: white;
+  background-color: #00FF99;
+  color: black;
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
@@ -52,7 +52,7 @@ function myFunction() {
         var y = document.getElementById("eventid").value;
         var z = document.getElementById("eventdata").value;
         var q = document.getElementById("eventname").value;
-        document.getElementById("demo").innerHTML = "Get-WinEvent -LogName " + x + " -FilterXPath '*/System/EventID=" + y + ' | Select-Object TimeCreated, Id, LevelDisplayName, ProcessId, Message | Format-Table -AutoSize';
+        document.getElementById("demo").innerHTML = "Get-WinEvent -LogName " + x + " -FilterXPath '*/System/EventID=" + y;
     }
   
 function CopyToClipboard(id)
