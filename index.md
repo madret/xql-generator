@@ -19,7 +19,7 @@ pre {
   width: 350px;
   border: none;
   background-color: #00ff99;
-  color: white;
+  color: black;
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
