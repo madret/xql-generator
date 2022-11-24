@@ -51,7 +51,7 @@ function myFunction() {
         var x = document.getElementById("filter1").value;
         var y = document.getElementById("path").value;
         var z = document.getElementById("mode").value;
-        document.getElementById("demo").innerHTML = "dataset = xdr_data " + x + "'" + y + "'" + z ;
+        document.getElementById("demo").innerHTML = "dataset = xdr_data " + x + "'" + y + "'" + " " + z ;
     }
   
 function CopyToClipboard(id)
@@ -88,9 +88,8 @@ window.getSelection().removeAllRanges();
 	
     <p>- Select mode:</p>
 		<select class="select" id="mode" value="" placeholder="Empty">
-	  	<option value="DestinationPort">Network mode</option>
-		<option value="DestinationIp">Debug mode</option>
-		<option value="DestinationHostname">BIOC mode</option>
+	  	<option value="">Network mode</option>
+		<option value="| fields _time, agent_ip_addresses, actor_process_image_name, actor_process_command_line, actor_process_os_pid, actor_process_signature_status, agent_hostname, actor_effective_username, action_local_ip, action_local_port, action_remote_ip, action_remote_port, agent_os_type">Debug mode</option>
 		</select>
 	
     <br/>
