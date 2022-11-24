@@ -18,7 +18,7 @@ pre {
   display: block;
   width: 350px;
   border: none;
-  background-color: #00ff99;
+  background-color: #1E90FF;
   color: white;
   padding: 14px 28px;
   font-size: 16px;
@@ -33,7 +33,6 @@ pre {
  height:22px;
 	
 	}
-	
 .select {
 height:30px;
 font-size:large;
