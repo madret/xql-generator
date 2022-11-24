@@ -79,7 +79,8 @@ window.getSelection().removeAllRanges();
 	<option value="| filter dst_action_external_hostname ">Hostname</option>
 	</select>
 
-    <br/> 	
+    <br/> 
+    <br/>
     <p>- Enter IP address or hostname:</p>
 	<p><input class="boks" type="text" id="path" placeholder="192.168..."></p>
 
