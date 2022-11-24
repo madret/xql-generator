@@ -50,7 +50,7 @@ function myFunction() {
     function myFunction() {
         var x = document.getElementById("filter1").value;
         var y = document.getElementById("path").value;
-        var z = document.getElementById("mode").value;
+        var z = document.getElementById("unit").value;
         document.getElementById("demo").innerHTML = "dataset = xdr_data " + x + "'" + y + "'" + ' ' + z + ' ';}
   
 function CopyToClipboard(id)
@@ -85,7 +85,7 @@ window.getSelection().removeAllRanges();
     <br/>
 	
     <p>- Select mode:</p>
-		<select class="select" id="mode" value="" placeholder="">
+		<select class="select" id="unit" value="" placeholder="">
 	  	<option value="| fields _time, agent_ip_addresses, agent_hostname, actor_effective_username, action_local_ip, action_local_port, action_remote_ip, action_remote_port, actor_process_image_name, actor_process_command_line, actor_process_os_pid, actor_process_signature_status, agent_os_type">Network mode</option>
 		<option value="| fields _time, agent_ip_addresses, actor_process_image_name, actor_process_command_line, actor_process_os_pid, actor_process_signature_status, agent_hostname, actor_effective_username, action_local_ip, action_local_port, action_remote_ip, action_remote_port, agent_os_type">Debug mode</option>
 		</select>
