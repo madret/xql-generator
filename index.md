@@ -100,7 +100,7 @@ window.getSelection().removeAllRanges();
 <p> Output:</p>
 
 <pre id="demo">
-<code id="copy">dataset = xdr_data  | filter .... </code>
+<code id="copy"> ... </code>
 </pre>
       
 <!-- <a href="#" onclick="CopyToClipboard('copy');return false;">Copy To clipboard</a> -->
