@@ -139,7 +139,7 @@ window.getSelection().removeAllRanges();
 <p> Output:</p>
 
 <pre id="demo">
-<code id="copy">Get-WinEvent -LogName C:\.... -FilterXPath ..... and .... and .... </code>
+<code id="copy">... </code>
 </pre>
       
 <!-- <a href="#" onclick="CopyToClipboard('copy');return false;">Copy To clipboard</a> -->
