@@ -69,16 +69,16 @@ window.getSelection().removeAllRanges();
 </head>
 <body>
 	
-     <p>- Select filter 1</p>
+     <p>- Select filter:</p>
         <select class="select" id="filter1">
 	<option value="| filter action_local_ip = ">Local IP address (connections from)</option>
-	<option value="remote">Remote IP address (connections to)</option>
-	<option value="hostname">Hostname (example.com)</option>
+	<option value="| filter action_remote_ip = ">Remote IP address (connections to)</option>
+	<option value="| filter dst_action_external_hostname ">Hostname (example.com)</option>
 	</select>
 
     <br/>
 
-    <p>- Enter IP address or hostname address:</p>
+    <p>- Enter IP address or hostname:</p>
     <p><input class="boks" type="text" id="path" value="'Security'" placeholder="'Security'"></p>
 
     <br/>
