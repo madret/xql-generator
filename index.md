@@ -18,8 +18,8 @@ pre {
   display: block;
   width: 350px;
   border: none;
-  background-color: #1E90FF;
-  color: white;
+  background-color: #00ff99;
+  color: black;
   padding: 14px 28px;
   font-size: 16px;
   cursor: pointer;
