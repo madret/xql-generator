@@ -18,7 +18,7 @@ pre {
   display: block;
   width: 350px;
   border: none;
-  background-color: #1E90FF;
+  background-color: #00ff99;
   color: white;
   padding: 14px 28px;
   font-size: 16px;
@@ -50,9 +50,8 @@ function myFunction() {
     function myFunction() {
         var x = document.getElementById("filter1").value;
         var y = document.getElementById("path").value;
-        var z = document.getElementById("eventdata").value;
-        var q = document.getElementById("eventname").value;
-        document.getElementById("demo").innerHTML = "dataset = xdr_data " + x + "'" + y + "'" + ' | Select-Object TimeCreated, Id, LevelDisplayName, ProcessId, Message | Format-Table -AutoSize';
+        var z = document.getElementById("mode").value;
+        document.getElementById("demo").innerHTML = "dataset = xdr_data " + x + "'" + y + "'" + z ;
     }
   
 function CopyToClipboard(id)
@@ -88,18 +87,11 @@ window.getSelection().removeAllRanges();
     <br/>
 	
     <p>- Select mode:</p>
-		<select class="select" id="eventdata" value="" placeholder="Empty">
+		<select class="select" id="mode" value="" placeholder="Empty">
 	  	<option value="DestinationPort">Network mode</option>
 		<option value="DestinationIp">Debug mode</option>
 		<option value="DestinationHostname">BIOC mode</option>
 		</select>
-
-    <br/>
-    <br/>
-	
-    <p>- Set the Name value for the choosen EventData:</p> 
-    <p><b>For example:</b> Eventdata=DestinationPort <span style="color: red;">And</span> Name=4444 (standard MSF portnumber).</p>  
-    <p><input type="text" class="boks" id="eventname" value="" placeholder="e.g. 4444"></p>
 	
     <br/>
 
