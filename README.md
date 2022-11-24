@@ -2,5 +2,5 @@
 XQL query generator.
 
 # Visit the github page:
-https://madret.github.io/xql-generator/
+https://madret.github.io/xql-qenerator/
 
