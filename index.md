@@ -52,7 +52,7 @@ function myFunction() {
         var y = document.getElementById("eventid").value;
         var z = document.getElementById("eventdata").value;
         var q = document.getElementById("eventname").value;
-        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + "'" + x + "'" + z;
+        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + '"' + x + '"' + z;
     }
   
 function CopyToClipboard(id)
