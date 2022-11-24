@@ -52,7 +52,7 @@ function myFunction() {
         var x = document.getElementById("filter1").value;
         var y = document.getElementById("path").value;
         var z = document.getElementById("unit").value;
-        document.getElementById("demo").innerHTML = "dataset = xdr_data " + x + "'" + y + "'" ;}
+        document.getElementById("demo").innerHTML = "dataset = xdr_data " + x + "'" + y + "'" + z + "test";}
   
 function CopyToClipboard(id)
 var r = document.createRange();
