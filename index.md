@@ -79,53 +79,17 @@ window.getSelection().removeAllRanges();
     <br/>
 
     <p>- Enter IP address or hostname:</p>
-    <p><input class="boks" type="text" id="path" value="'Security'" placeholder="'Security'"></p>
-
-    <br/>
-
+    <p><input class="boks" type="text" id="path" value="" placeholder="192.168."></p>
 
     <br/>
 
     <br/>
     <br/>
-    <p>- Select EventData:</p>
-		<select class="select" id="eventdata">
-		<optgroup label="Frequently used:">
-	  	<option value="DestinationPort">DestinationPort</option>
-		<option value="DestinationIp">DestinationIp</option>
-		<option value="DestinationHostname">DestinationHostname</option>
-		<option value="Image">Image</option>
-		<option value="SourcePort">SourcePort</option>
-		<option value="SourceIp">SourceIp</option>
-		<option value="SourceHostname">SourceHostname</option>
-		<option value="SourceImage">SourceImage</option>
-		<option value="TargetImage">TargetImage</option>
-		<option value="TargetFileName">TargetFileName</option>
-		</optgroup>
-		<optgroup label="More:">
-		<option value="CommandLine">CommandLine</option>
-		<option value="Company">Company</option>
-		<option value="CreationUtcTime">CreationUtcTime</option>
-		<option value="CurrentDirectory">CurrentDirectory</option>
-		<option value="Description">Description</option>
-		<option value="HostUrl">HostUrl</option>
-		<option value="ImageLoaded">ImageLoaded</option>
-		<option value="Integrity Level">IntegrityLevel</option>
-		<option value="OriginalFileName">OriginalFileName</option>
-		<option value="ParentCommandLine">ParentCommandLine</option>
-		<option value="ParentImage">ParentImage</option>
-		<option value="ProcessId">ProcessId</option>
-		<option value="QueryName">QueryName</option>
-		<option value="QueryResults">QueryResults</option>
-		<option value="QueryStatus">QueryStatus</option>
-		<option value="Signature">Signature</option>
-		<option value="Signed">Signed</option>
-		<option value="StartModule">StartModule</option>
-		<option value="TargetObject">TargetObject</option>
-		<option value="TargetProcessId">TargetProcessId</option>
-		<option value="User">User</option>
-		<option value="UtcTime">UtcTime</option>
-		</optgroup>
+    <p>- Select mode:</p>
+		<select class="select" id="eventdata" value="" placeholder="Empty">
+	  	<option value="DestinationPort">Network mode</option>
+		<option value="DestinationIp">Debug mode</option>
+		<option value="DestinationHostname">BIOC mode</option>
 		</select>
 
     <br/>
