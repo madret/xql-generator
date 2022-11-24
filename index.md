@@ -48,11 +48,11 @@ function myFunction() {
       
     // Here the value is stored in new variable x 
     function myFunction() {
-        var x = document.getElementById("path").value;
-        var y = document.getElementById("eventid").value;
+        var x = document.getElementById("filter1").value;
+        var y = document.getElementById("path").value;
         var z = document.getElementById("eventdata").value;
         var q = document.getElementById("eventname").value;
-        document.getElementById("demo").innerHTML = "dataset = xdr_data " + x + " -FilterXPath '*/System/EventID='" + y + ' | Select-Object TimeCreated, Id, LevelDisplayName, ProcessId, Message | Format-Table -AutoSize';
+        document.getElementById("demo").innerHTML = "dataset = xdr_data " + x + "'" + y + "'" + ' | Select-Object TimeCreated, Id, LevelDisplayName, ProcessId, Message | Format-Table -AutoSize';
     }
   
 function CopyToClipboard(id)
@@ -69,16 +69,16 @@ window.getSelection().removeAllRanges();
 </head>
 <body>
 	
-     <p>- Select Event ID:</p>
-        <select class="select" id="eventid">
-	<option value="4625">4625 - An account failed to log on</option>
-	<option value="4740">4740 - A user account was locked out</option>
-	<option value="4771">4771 - Kerberos pre-authentication failed</option>
+     <p>- Select filter 1</p>
+        <select class="select" id="filter1">
+	<option value="| filter action_local_ip = ">Local IP address (connections from)</option>
+	<option value="remote">Remote IP address (connections to)</option>
+	<option value="hostname">Hostname (example.com)</option>
 	</select>
 
     <br/>
 
-    <p>- Select the log:</p>
+    <p>- Enter IP address or hostname address:</p>
     <p><input class="boks" type="text" id="path" value="'Security'" placeholder="'Security'"></p>
 
     <br/>
