@@ -77,14 +77,14 @@ window.getSelection().removeAllRanges();
 	</select>
 
     <br/>
+    <br/>
 
     <p>- Enter IP address or hostname:</p>
     <p><input class="boks" type="text" id="path" value="" placeholder="192.168."></p>
 
     <br/>
-
     <br/>
-    <br/>
+	
     <p>- Select mode:</p>
 		<select class="select" id="eventdata" value="" placeholder="Empty">
 	  	<option value="DestinationPort">Network mode</option>
