@@ -51,7 +51,7 @@ function myFunction() {
         var x = document.getElementById("filter1").value;
         var y = document.getElementById("path").value;
         var z = document.getElementById("mode").value;
-        document.getElementById("demo").innerHTML = "dataset = xdr_data " + x + "'" + y + "'" + " " + z ;
+        document.getElementById("demo").innerHTML = "dataset = xdr_data " + x + "'" + y + "'" + " " + z + " ";
     }
   
 function CopyToClipboard(id)
@@ -100,7 +100,7 @@ window.getSelection().removeAllRanges();
 <p> Output:</p>
 
 <pre id="demo">
-<code id="copy">...</code>
+<code id="copy">Test test...</code>
 </pre>
       
 <!-- <a href="#" onclick="CopyToClipboard('copy');return false;">Copy To clipboard</a> -->
