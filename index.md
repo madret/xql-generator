@@ -81,7 +81,7 @@ window.getSelection().removeAllRanges();
     <br/>
 
     <p>- Enter IP address or hostname:</p>
-    <p><input class="boks" type="text" id="path" value="" placeholder="192.168."></p>
+    <p><input class="boks" type="text" id="path" value="Results" placeholder="192.168."></p>
 
     <br/>
     <br/>
@@ -101,7 +101,7 @@ window.getSelection().removeAllRanges();
 <p> Output:</p>
 
 <pre id="demo">
-<code id="copy">Results..</code>
+<code id="copy">Results</code>
 </pre>
       
 <!-- <a href="#" onclick="CopyToClipboard('copy');return false;">Copy To clipboard</a> -->
