@@ -18,7 +18,7 @@ pre {
   display: block;
   width: 350px;
   border: none;
-  background-color: #1E90FF;
+  background-color: #00ff99;
   color: white;
   padding: 14px 28px;
   font-size: 16px;
@@ -33,6 +33,7 @@ pre {
  height:22px;
 	
 	}
+	
 .select {
 height:30px;
 font-size:large;
@@ -43,15 +44,15 @@ font-size:large;
     <script>
 
 function myFunction() {
-  document.getElementById("event_id").style.visibility = "hidden";
+  document.getElementById("unit").style.visibility = "hidden";
 }
       
     // Here the value is stored in new variable x 
     function myFunction() {
-        var x = document.getElementById("path").value;
-        var y = document.getElementById("filter1").value;
-        document.getElementById("demo").innerHTML = "Get-WinEvent -LogName " + x + " -FilterXPath '*/System/EventID=" + y + "'" + " | Select-Object TimeCreated, Id, LevelDisplayName, ProcessId, Message | Format-Table -AutoSize";
-    }
+        var x = document.getElementById("filter1").value;
+        var y = document.getElementById("path").value;
+        var z = document.getElementById("unit").value;
+        document.getElementById("demo").innerHTML = "dataset = xdr_data " + x + "'" + y + "'" ;}
   
 function CopyToClipboard(id)
 var r = document.createRange();
@@ -80,7 +81,7 @@ window.getSelection().removeAllRanges();
     <br/>
 
     <p>- Enter IP address or hostname:</p>
-    <p><input class="boks" type="text" id="path" value="Results" placeholder="192.168."></p>
+    <p><input class="boks" type="text" id="path" value="" placeholder="192.168."></p>
 
     <br/>
     <br/>
@@ -100,7 +101,7 @@ window.getSelection().removeAllRanges();
 <p> Output:</p>
 
 <pre id="demo">
-<code id="copy">Results</code>
+<code id="copy">Results..</code>
 </pre>
       
 <!-- <a href="#" onclick="CopyToClipboard('copy');return false;">Copy To clipboard</a> -->
