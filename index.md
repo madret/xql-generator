@@ -100,7 +100,7 @@ window.getSelection().removeAllRanges();
 	
     <br/>
 
-    <p><button class="block" type="button" onclick="myFunction()"><b>Generate Powershell command</b></button></p>
+    <p><button class="block" type="button" onclick="myFunction()"><b>Generate XQL query</b></button></p>
 
     <br/>
 
