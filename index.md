@@ -96,7 +96,7 @@ window.getSelection().removeAllRanges();
 	
 
     <p>- Additional values:</p> 
-    <p><input type="text" class="boks" id="eventname" value=""></p>
+    <p><input type="text" class="boks" id="eventname" value="" placeholder="If not, keep empty."></p>
 	
     <br/>
 
