@@ -44,7 +44,7 @@ font-size:large;
     <script>
 
 function myFunction() {
-  document.getElementById("unit").style.visibility = "hidden";
+  document.getElementById("event_id").style.visibility = "hidden";
 }
       
     // Here the value is stored in new variable x 
