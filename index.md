@@ -70,7 +70,7 @@ window.getSelection().removeAllRanges();
 </head>
 <body>
 	
-	    <p>- Select filter:</p>
+	    <p>- Select filter 1:</p>
     	<select class="select" id="eventid">
 	<option value="| filter action_local_ip = ">Local IP address (connections from)</option>
 	<option value="| filter action_remote_ip = ">Remote IP address (connections to)</option>
@@ -92,15 +92,17 @@ window.getSelection().removeAllRanges();
 
     <br/>
     <br/>
-	<p>- Expand search on username:</p>
+	<p>- Select filter 2:</p>
     	<select class="select" id="unit" value="">
 	<!-- <option disabled selected value> -- Select or keep empty -- </option> -->
 	<option value=" | filter actor_effective_username =">Username</option>
+	<option value=" | filter action_local_port =">Source port</option>
+	<option value=" | filter action_remote_port =">Destination port</option>
 	</select>
     <br/>
     <br/>
 	
-    <p>- Enter username:</p> 
+    <p>- Enter value:</p> 
     <p><input type="text" class="boks" id="eventname" placeholder="Or keep as wildcard."></p>
 	
     <br/>
