@@ -53,7 +53,7 @@ function myFunction() {
         var z = document.getElementById("eventdata").value;
 	var a = document.getElementById("unit").value;
         var q = document.getElementById("eventname").value;
-        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + '"' + x + '"' + a + ' "' + q + '" ' + z;
+        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + '"' + x + '"' + a + ' "*' + q + '" ' + z;
     }
   
 function CopyToClipboard(id)
@@ -92,8 +92,9 @@ window.getSelection().removeAllRanges();
 		</select>
 
     <br/>
+    <br/>
 	<p>- Expand search on username:</p>
-    	<select class="select" id="unit" value="" placeholder="Empty">
+    	<select class="select" id="unit" value=* placeholder="Empty">
 	<option value=' | filter actor_effective_username = "*"'>Empty</option>
 	<option value=" | filter actor_effective_username = ">Username</option>
 		</select>
@@ -101,7 +102,7 @@ window.getSelection().removeAllRanges();
     <br/>
 	
     <p>- Enter username:</p> 
-    <p><input type="text" class="boks" id="eventname" value="" placeholder="If not, keep empty."></p>
+    <p><input type="text" class="boks" id="eventname" placeholder="If username selected above, fill in username"></p>
 	
     <br/>
 
