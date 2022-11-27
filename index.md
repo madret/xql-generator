@@ -94,14 +94,14 @@ window.getSelection().removeAllRanges();
     <br/>
 	<p>- Expand search on username:</p>
     	<select class="select" id="unit" value="">
-	<option disabled selected value> -- Select or keep empty -- </option>
+	<!-- <option disabled selected value> -- Select or keep empty -- </option> -->
 	<option value=" | filter actor_effective_username =">Username</option>
 	</select>
     <br/>
     <br/>
 	
     <p>- Enter username:</p> 
-    <p><input type="text" class="boks" id="eventname" placeholder="Username"></p>
+    <p><input type="text" class="boks" id="eventname" placeholder="Or keep as wildcard."></p>
 	
     <br/>
 
