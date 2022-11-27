@@ -53,7 +53,7 @@ function myFunction() {
         var z = document.getElementById("eventdata").value;
 	var a = document.getElementById("unit").value;
         var q = document.getElementById("eventname").value;
-        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + '"' + x + '"' + a + " " + z;
+        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + '"' + x + '"' + a + " " + z + " " + q;
     }
   
 function CopyToClipboard(id)
@@ -100,7 +100,7 @@ window.getSelection().removeAllRanges();
     <br/>
     <br/>
 	
-    <p>- Additional values:</p> 
+    <p>- Enter username:</p> 
     <p><input type="text" class="boks" id="eventname" value="" placeholder="If not, keep empty."></p>
 	
     <br/>
