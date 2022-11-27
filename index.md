@@ -72,7 +72,7 @@ window.getSelection().removeAllRanges();
 	
 	    <p>- Select filter:</p>
     	<select class="select" id="eventid">
-	<option disabled selected value> -- select filter or keep empty -- </option>
+	<option disabled selected value> -- Select filter or keep empty -- </option>
 	<option value="| filter action_local_ip = ">Local IP address (connections from)</option>
 	<option value="| filter action_remote_ip = ">Remote IP address (connections to)</option>
 	<option value="| filter dst_action_external_hostname = ">Hostname (DNS)</option>
@@ -95,13 +95,14 @@ window.getSelection().removeAllRanges();
     <br/>
 	<p>- Expand search on username:</p>
     	<select class="select" id="unit" value="">
+	<option disabled selected value> -- Select or keep empty -- </option>
 	<option value=" | filter actor_effective_username =">Username</option>
 	</select>
     <br/>
     <br/>
 	
     <p>- Enter username:</p> 
-    <p><input type="text" class="boks" id="eventname" placeholder="Username or keep empty."></p>
+    <p><input type="text" class="boks" id="eventname" placeholder="Username"></p>
 	
     <br/>
 
