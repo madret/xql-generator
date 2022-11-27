@@ -109,7 +109,7 @@ window.getSelection().removeAllRanges();
 
     <br/>
 
-<p> Output:</p>
+<p> Output (double click to select all):</p>
 
 <pre id="demo">
 <code id="copy">Results..</code>
