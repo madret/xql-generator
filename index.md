@@ -53,7 +53,7 @@ function myFunction() {
         var z = document.getElementById("eventdata").value;
 	var a = document.getElementById("unit").value;
         var q = document.getElementById("eventname").value;
-        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + '"' + x + '"' + a + " " + z + " " + q;
+        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + '"' + x + '"' + a + ' "' + q + '" ' + z;
     }
   
 function CopyToClipboard(id)
