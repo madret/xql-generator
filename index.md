@@ -93,10 +93,9 @@ window.getSelection().removeAllRanges();
     <br/>
     <br/>
 	<p>- Expand search on username:</p>
-    	<select class="select" id="unit" value="" placeholder="Empty">
-	<option value=" | filter actor_effective_username =">Empty</option>
+    	<select class="select" id="unit" value="">
 	<option value=" | filter actor_effective_username =">Username</option>
-		</select>
+	</select>
     <br/>
     <br/>
 	
@@ -109,7 +108,7 @@ window.getSelection().removeAllRanges();
 
     <br/>
 
-<p> Output (double click to select all):</p>
+<p> Output:</p>
 
 <pre id="demo">
 <code id="copy">Results..</code>
