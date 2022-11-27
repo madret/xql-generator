@@ -51,8 +51,9 @@ function myFunction() {
         var x = document.getElementById("path").value;
         var y = document.getElementById("eventid").value;
         var z = document.getElementById("eventdata").value;
+	var a = document.getElementById("unit").value;
         var q = document.getElementById("eventname").value;
-        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + '"' + x + '"' + z;
+        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + '"' + x + '"' + a + " " + z;
     }
   
 function CopyToClipboard(id)
@@ -76,13 +77,12 @@ window.getSelection().removeAllRanges();
 	<option value="| filter action_remote_ip = ">Remote IP address (connections to)</option>
 	<option value="| filter agent_hostname = ">Device name (Workstation)</option>
 	<option value="| filter dst_action_external_hostname = ">Hostname (DNS)</option>
-	<option value="| filter actor_effective_username = ">Username</option>
 		</select>
 
     <br/> 
     <br/>
     <p>- Enter IP address or hostname (or keep as wildcard):</p>
-	<p><input class="boks" type="text" id="path" value='"*"' placeholder="*"></p>
+	<p><input class="boks" type="text" id="path" value="*" placeholder="*"></p>
 
     <br/>
     <p>- Select mode:</p>
@@ -92,9 +92,13 @@ window.getSelection().removeAllRanges();
 		</select>
 
     <br/>
+	<p>- Expand search on username:</p>
+    	<select class="select" id="unit" value="" placeholder="Empty">
+	<option value="| filter actor_effective_username = ">Username</option>
+		</select>
+    <br/>
     <br/>
 	
-
     <p>- Additional values:</p> 
     <p><input type="text" class="boks" id="eventname" value="" placeholder="If not, keep empty."></p>
 	
