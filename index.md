@@ -103,7 +103,7 @@ window.getSelection().removeAllRanges();
     <br/>
 	
     <p>- Enter value:</p> 
-    <p><input type="text" class="boks" id="eventname" placeholder="Or keep as wildcard."></p>
+    <p><input type="text" class="boks" id="eventname" placeholder="Or keep empty as wildcard."></p>
 	
     <br/>
 
