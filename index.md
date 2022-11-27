@@ -3,6 +3,7 @@
 <head>
 
 	<h1 class="title"> XQL query <span style="color: red;">generator</span>.</h1>
+	<h1>Quick and dirty hunting tool.</h1><hr/>
 	
 	<title> XQL-Generator</title>
 <style>
