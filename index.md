@@ -94,7 +94,7 @@ window.getSelection().removeAllRanges();
     <br/>
 	<p>- Expand search on username:</p>
     	<select class="select" id="unit" value="" placeholder="Empty">
-	<option value=' | filter actor_effective_username = "*"'>Empty</option>
+	<option value=' | filter actor_effective_username = '>Empty</option>
 	<option value=" | filter actor_effective_username = ">Username</option>
 		</select>
     <br/>
