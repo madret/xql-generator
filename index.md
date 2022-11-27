@@ -101,7 +101,7 @@ window.getSelection().removeAllRanges();
     <br/>
 	
     <p>- Enter username:</p> 
-    <p><input type="text" class="boks" id="eventname" placeholder="If username selected above, fill in username"></p>
+    <p><input type="text" class="boks" id="eventname" placeholder="Username or keep empty.></p>
 	
     <br/>
 
