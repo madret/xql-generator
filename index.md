@@ -72,7 +72,7 @@ window.getSelection().removeAllRanges();
 	
 	    <p>- Select filter:</p>
     	<select class="select" id="eventid">
-	<option disabled selected value> -- select an option -- </option>
+	<option disabled selected value> -- select filter or keep empty -- </option>
 	<option value="| filter action_local_ip = ">Local IP address (connections from)</option>
 	<option value="| filter action_remote_ip = ">Remote IP address (connections to)</option>
 	<option value="| filter dst_action_external_hostname = ">Hostname (DNS)</option>
