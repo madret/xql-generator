@@ -48,12 +48,13 @@ function myFunction() {
       
     // Here the value is stored in new variable x 
     function myFunction() {
+	var b = document.getElementById("first").value;
         var x = document.getElementById("path").value;
         var y = document.getElementById("eventid").value;
         var z = document.getElementById("eventdata").value;
 	var a = document.getElementById("unit").value;
         var q = document.getElementById("eventname").value;
-        document.getElementById("demo").innerHTML = "dataset = xdr_data " + y + '"' + x + '"' + a + ' "*' + q + '" ' + z;
+        document.getElementById("demo").innerHTML = b + y + '"' + x + '"' + a + ' "*' + q + '" ' + z;
     }
   
 function CopyToClipboard(id)
@@ -70,6 +71,15 @@ window.getSelection().removeAllRanges();
 </head>
 <body>
 	
+	    <p>- Select dataset:</p>
+    	<select class="select" id="first">
+	<option value="preset = network_story ">Network story</option>
+	<option value="dataset = xdr_data ">XDR log data</option>
+	</select>
+
+    <br/> 
+    <br/>
+	
 	    <p>- Select filter 1:</p>
     	<select class="select" id="eventid">
 	<option value="| filter action_local_ip = ">Local IP address (connections from)</option>
@@ -77,16 +87,17 @@ window.getSelection().removeAllRanges();
 	<option value="| filter dst_action_external_hostname = ">Hostname (DNS)</option>
 	<option value="| filter agent_hostname = ">Device name (Workstation)</option>
 	</select>
-
+	
     <br/> 
-    <br/>
+    <br/>	
+	
     <p>- Enter IP address or hostname:</p>
 	<p><input class="boks" type="text" id="path" value="" placeholder="IP / DNS / Workstation ID"></p>
 
     <br/>
     <p>- Select mode:</p>
 		<select class="select" id="eventdata">
-	  	<option value=" | fields _time, agent_ip_addresses, agent_hostname, actor_effective_username, action_local_ip, action_local_port, action_remote_ip, action_remote_port, actor_process_image_name, actor_process_command_line, actor_process_os_pid, actor_process_signature_status, agent_os_type">Network mode</option>
+	  	<option value=" | fields _time, dst_action_external_hostname, agent_hostname, actor_effective_username, action_local_ip, action_local_port, action_remote_ip, action_remote_port, actor_process_image_name, actor_process_command_line, actor_process_os_pid, actor_process_signature_status, agent_os_type">Network mode</option>
 		<option value=" | fields _time, actor_process_image_name, actor_process_command_line, actor_process_os_pid, actor_process_signature_status, agent_hostname, actor_effective_username, action_local_ip, action_local_port, action_remote_ip, action_remote_port, agent_os_type">Debug mode</option>
 		</select>
 
