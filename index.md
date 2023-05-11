@@ -80,7 +80,7 @@ window.getSelection().removeAllRanges();
     <br/> 
     <br/>
 	
-	    <p>- Select filter 1:</p>
+	    <p>- Select search filter 1:</p>
     	<select class="select" id="eventid">
 	<option value="| filter action_local_ip = ">Local IP address (connections from)</option>
 	<option value="| filter action_remote_ip = ">Remote IP address (connections to)</option>
@@ -103,7 +103,7 @@ window.getSelection().removeAllRanges();
 
     <br/>
     <br/>
-	<p>- Select filter 2:</p>
+	<p>- Select search filter 2:</p>
     	<select class="select" id="unit" value="">
 	<!-- <option disabled selected value> -- Select or keep empty -- </option> -->
 	<option value=" | filter actor_effective_username =">Username</option>
