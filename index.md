@@ -107,8 +107,7 @@ window.getSelection().removeAllRanges();
     	<select class="select" id="unit" value="">
 	<!-- <option disabled selected value> -- Select or keep empty -- </option> -->
 	<option value=" | filter actor_effective_username =">Username</option>
-	<option value=" | filter action_local_port =">Source port</option>
-	<option value=" | filter action_remote_port =">Destination port</option>
+	<option value=" | actor_process_image_name =">Process name</option>
 	</select>
     <br/>
     <br/>
