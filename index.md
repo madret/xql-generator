@@ -1,5 +1,3 @@
-<html>
-
 <head>
 
 	<h1 class="title"> XQL query <span style="color: red;">generator</span>.</h1>
@@ -134,4 +132,4 @@ window.getSelection().removeAllRanges();
 <p>Sloppy hobby project brought to you by:</p>
 <a href="https://twitter.com/b41ss">@b41ss</a>	 
 <p>Cheers!</p>
-</html>
+
